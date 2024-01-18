@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: auto; /* Add scroll if content is larger than screen */
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.selector-container {
+    margin: 20px;
+}
+
+#region-selector {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 20px; /* Spacing between charts */
+    justify-items: center; /* Center charts horizontally */
+    align-items: start; /* Align charts to the start of the grid area */
+    margin: 20px;
+}
+
+.chart-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative; /* For absolute positioning of chart titles */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
+
+.chart-container h3 {
+    position: absolute;
+    top: -30px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important; /* Override Chart.js inline styles */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .charts-grid {
+        grid-template-columns: 1fr; /* One column */
+        grid-template-rows: auto; /* Auto row height */
+    }
+}

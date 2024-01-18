@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flu Data Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <h1>Influenza Impact Analysis Across States</h1>
+            <div class="selector-container">
+                <label for="region-selector">Select a Region:</label>
+                <select id="region-selector"></select>
+            </div>
+        </header>
+
+        <div class="charts-grid">
+            <div class="chart-container" id="chart-container">
+                <h3>Average in each State</h3>
+                <canvas id="chart"></canvas>
+            </div>
+                
+            <div class="chart-container" id="chart-container-total">
+                <h3>People are Affected by it in each State</h3>
+                <canvas id="chart-total"></canvas>
+            </div>
+                
+            <div class="chart-container" id="chart-container-age-group">
+                <h3>Age Brackets in each State</h3>
+                <canvas id="chart-age-group"></canvas>
+            </div>
+            
+            <div class="chart-container" id="chart-container-weekly">
+                <h3>Time of the year it affects the People Most</h3>
+                <canvas id="chart-weekly"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
